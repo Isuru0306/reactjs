@@ -1,11 +1,23 @@
-import { Car } from "./components/car/Car";
-import { Greeting } from "./components/greeting/Greeting";
-import "./global.css";
-
+import { useState } from "react";
+import { DisplayDifficulty } from "./components/DisplayDifficaulty/DisplayDifficulty";
+import { MenuList } from "./components/MunuLIst/MenuList";
+import i from "./style.module.css";
 export function App() {
+  const [currentDifficulty, setCurrentDifficulty] = useState("");
+
+  const onMenuListItemClick = (dif) => {
+    setCurrentDifficulty(dif);
+  };
   return (
     <>
-      <input type="text" onChange={console.log("on change")} />
+      <h1>Workspace </h1>
+      <div className={i.workspace}>
+        <MenuList
+          difficulty={currentDifficulty}
+          onItemClick={onMenuListItemClick}
+        />
+        <DisplayDifficulty difficulty={currentDifficulty} />
+      </div>
     </>
   );
 }
