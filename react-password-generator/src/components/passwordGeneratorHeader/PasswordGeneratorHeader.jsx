@@ -3,7 +3,7 @@ import lockIcon from "../../assets/lock.svg";
 export function PasswordGeneratorHeader() {
   return (
     <div className={css.root}>
-      <div className={css.title}>PassWord Generator</div>
+      <div className={css.title}>Password Generator</div>
       <img src={lockIcon} className={css.icon} alt="Lock Icon" />
     </div>
   );
