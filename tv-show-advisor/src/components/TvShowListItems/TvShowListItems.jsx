@@ -1,4 +1,4 @@
-import { SMALL_IMAGE_BASE_URL } from "../../config";
+import { SMALL_IMAGE_BASE_URL } from "../../config.js";
 import s from "./style.module.css";
 const MAX_TITLE_CHAR = 20;
 export default function TvShowListItems({ tvShow, onCardClick }) {
